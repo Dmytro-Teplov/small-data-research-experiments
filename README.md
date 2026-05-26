@@ -13,11 +13,11 @@ The project evaluates how YOLOv12-based object detection models behave when only
 Full result folders, including trained model outputs and experiment logs, are stored separately in Google Drive.
 
 > **Google Drive results archive:**  
-> Google Drive link: `https://drive.google.com/drive/folders/1nzIkq9CWhbB9Hmah8EMoh0BGGSIZkzWb?usp=sharing`
+> `https://drive.google.com/drive/folders/1nzIkq9CWhbB9Hmah8EMoh0BGGSIZkzWb?usp=sharing`
 
 The Google Drive archive follows the same directory structure shown below, so the analysis scripts can be used with either the local repository files or the downloaded result folders.
 
----
+
 
 ## Research Goal
 
@@ -25,32 +25,12 @@ The goal of this repository is to support a controlled empirical study of traini
 
 The thesis investigates the following research question:
 
-> How do dataset size, pretraining quality, model capacity, augmentation, and fine-tuning strategy affect object detection performance under extremely limited labelled data conditions?
+* How do dataset size, pretraining quality, model capacity, augmentation, and fine-tuning strategy affect object detection performance under extremely limited labelled data conditions?
 
 The repository is intended to make the experimental pipeline easier to reproduce, inspect, extend, and analyze.
 
----
 
-## Main Experimental Factors
-
-The experiments are organized around the following variables:
-
-| Factor | Values / Description |
-|---|---|
-| Model family | YOLOv12 |
-| Model sizes | `n`, `s`, `m`, `l`; for COCO-scale analysis also `x` |
-| Target task | Trash object detection |
-| Target classes | `metal_can`, `disposable_cup`, `styrofoam` |
-| Target dataset fractions | `30%`, `50%`, `80%`, `100%` |
-| Pretraining sources | None, official COCO weights, custom COCO-subset weights, synthetic dataset weights |
-| COCO pretraining fractions | `10%`, `30%`, `50%`, `80%`, plus official full-COCO weights |
-| Fine-tuning strategy | Full fine-tuning or frozen backbone/neck with detection-head training |
-| Augmentation | YOLO built-in augmentation enabled or disabled |
-| Main metric | `mAP50-95` |
-
----
-
-## Repository Structure
+## Drive Structure
 
 ```text
 Experiments/
@@ -74,3 +54,22 @@ Experiments/
 │
 └── Pretraining_Models/
     └── Custom pretrained YOLOv12 model weights
+```
+
+## Main Experimental Factors
+
+The experiments are organized around the following variables:
+
+| Factor | Values / Description |
+|---|---|
+| Model family | YOLOv12 |
+| Model sizes | `n`, `s`, `m`, `l`; for COCO-scale analysis also `x` |
+| Target task | Trash object detection |
+| Target classes | `metal_can`, `disposable_cup`, `styrofoam` |
+| Target dataset fractions | `30%`, `50%`, `80%`, `100%` |
+| Pretraining sources | None, official COCO weights, custom COCO-subset weights, synthetic dataset weights |
+| COCO pretraining fractions | `10%`, `30%`, `50%`, `80%`, plus official full-COCO weights |
+| Fine-tuning strategy | Full fine-tuning or frozen backbone/neck with detection-head training |
+| Augmentation | YOLO built-in augmentation enabled or disabled |
+| Main metric | `mAP50-95` |
+
