@@ -13,7 +13,7 @@ The project evaluates how YOLOv12-based object detection models behave when only
 Full result folders, including trained model outputs and experiment logs, are stored separately in Google Drive.
 
 > **Google Drive results archive:**  
-> `https://drive.google.com/drive/folders/1nzIkq9CWhbB9Hmah8EMoh0BGGSIZkzWb?usp=sharing`
+[Google Drive Link 🔗](https://drive.google.com/drive/folders/1nzIkq9CWhbB9Hmah8EMoh0BGGSIZkzWb?usp=sharing)
 
 The Google Drive archive follows the same directory structure shown below, so the analysis scripts can be used with either the local repository files or the downloaded result folders.
 
